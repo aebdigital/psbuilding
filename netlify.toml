@@ -23,16 +23,3 @@
   for = "/components/*"
   [headers.values]
     Cache-Control = "public, max-age=86400"
-
-# Handle client-side routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  conditions = {Role = ["admin"], Country = ["US"]}
-
-# This ensures pretty URLs work
-[[redirects]]
-  from = "/pages/*"
-  to = "/:splat"
-  status = 301

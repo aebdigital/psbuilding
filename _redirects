@@ -1,19 +1,13 @@
 # Netlify Redirects Configuration
 
-# Clean URL redirects - remove .html extension
+# Clean URL redirects - remove .html extension  
 /galeria           /pages/galeria.html           200
 /projekty          /pages/galeria.html           200
 /prenajom          /pages/prenajom.html          200
 /bezpecnostne-dvere /pages/bezpecnostne-dvere.html 200
 /kontakt           /pages/kontakt.html           200
 
-# Main homepage redirect
-/                  /pages/index.html             200
-/home              /pages/index.html             200
-/domov             /pages/index.html             200
-
-# Legacy redirects for old structure (if any)
-/index.html        /pages/index.html             301
+# Legacy redirects for old structure
 /galeria.html      /galeria                      301
 /prenajom.html     /prenajom                     301
 /bezpecnostne-dvere.html /bezpecnostne-dvere     301
@@ -23,5 +17,6 @@
 /sluzby            /pages/index.html#services    302
 /services          /pages/index.html#services    302
 
-# Fallback for any missing pages
-/*                 /pages/index.html             404
+# Home page aliases
+/home              /pages/index.html             301
+/domov             /pages/index.html             301
