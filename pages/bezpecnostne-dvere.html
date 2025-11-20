@@ -3,51 +3,578 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bezpečnostné dvere - PS Building</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Bezpečnostné dvere HISEC - KLASIC, TREND, ELEGANTE | PS Building</title>
+    <meta name="description" content="Certifikované bezpečnostné dvere HISEC do bytov. Dostupné v designe KLASIC (trieda 1), TREND a ELEGANTE (trieda 2). Testované podľa STN EN 1627 s 15-bodovým uzamykacím systémom.">
+    <meta name="keywords" content="bezpečnostné dvere, HISEC, klasic, trend, elegante, certifikované dvere, STN EN 1627, bytové dvere, PS Building">
+    <meta name="author" content="PS Building s.r.o.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://psbuilding.sk/bezpecnostne-dvere.html">
+    <meta property="og:title" content="Bezpečnostné dvere HISEC - PS Building">
+    <meta property="og:description" content="Certifikované bezpečnostné dvere HISEC do bytov v designe KLASIC, TREND a ELEGANTE. Testované podľa STN EN 1627.">
+    <meta property="og:image" content="https://psbuilding.sk/sources/dvere/znak.webp">
+    <meta property="og:locale" content="sk_SK">
+    <meta property="og:site_name" content="PS Building">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://psbuilding.sk/bezpecnostne-dvere.html">
+    <meta property="twitter:title" content="Bezpečnostné dvere HISEC - PS Building">
+    <meta property="twitter:description" content="Certifikované bezpečnostné dvere HISEC do bytov. KLASIC, TREND, ELEGANTE - testované podľa STN EN 1627.">
+    <meta property="twitter:image" content="https://psbuilding.sk/sources/dvere/znak.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://psbuilding.sk/bezpecnostne-dvere.html">
     <link rel="stylesheet" href="/styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data - Product Catalog -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Bezpečnostné dvere HISEC",
+        "description": "Certifikované bezpečnostné dvere HISEC vhodné ako vstupné dvere do bytov. Dostupné v nadčasovom designe KLASIC a v modernom prevedení TREND a ELEGANTE.",
+        "brand": {
+            "@type": "Brand",
+            "name": "HISEC"
+        },
+        "manufacturer": {
+            "@type": "Organization",
+            "name": "PS Building s.r.o."
+        },
+        "category": "Bezpečnostné dvere",
+        "hasVariant": [
+            {
+                "@type": "ProductModel",
+                "name": "HISEC KLASIC",
+                "description": "Nadčasový dizajn, bezpečnostná trieda 1",
+                "additionalProperty": {
+                    "@type": "PropertyValue",
+                    "name": "Bezpečnostná trieda",
+                    "value": "1"
+                }
+            },
+            {
+                "@type": "ProductModel",
+                "name": "HISEC TREND",
+                "description": "Moderné prevedenie, bezpečnostná trieda 2",
+                "additionalProperty": {
+                    "@type": "PropertyValue",
+                    "name": "Bezpečnostná trieda",
+                    "value": "2"
+                }
+            },
+            {
+                "@type": "ProductModel",
+                "name": "HISEC ELEGANTE",
+                "description": "Moderné prevedenie, bezpečnostná trieda 2",
+                "additionalProperty": {
+                    "@type": "PropertyValue",
+                    "name": "Bezpečnostná trieda",
+                    "value": "2"
+                }
+            }
+        ],
+        "additionalProperty": [
+            {
+                "@type": "PropertyValue",
+                "name": "Certifikácia",
+                "value": "STN EN 1627"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "Uzamykací systém",
+                "value": "15-bodový"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "Hrúbka zárubňe",
+                "value": "170mm"
+            }
+        ],
+        "image": [
+            "https://psbuilding.sk/sources/dvere/klassik 1-3.webp",
+            "https://psbuilding.sk/sources/dvere/trend p 1-0.webp",
+            "https://psbuilding.sk/sources/dvere/elegant 1-0.webp"
+        ]
+    }
+    </script>
+    <style>
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+        }
+        
+        .lightbox.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            animation: lightboxZoom 0.3s ease;
+        }
+        
+        @keyframes lightboxZoom {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .lightbox-image {
+            width: 100%;
+            height: auto;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            cursor: pointer;
+        }
+        
+        .lightbox-close {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            z-index: 10001;
+        }
+        
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+        
+        .lightbox-nav {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10002;
+            transition: all 0.3s ease;
+        }
+        
+        .lightbox-nav:hover {
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .lightbox-prev {
+            left: 20px;
+        }
+        
+        .lightbox-next {
+            right: 20px;
+        }
+        
+        /* Mobile responsive styles */
+        @media (max-width: 768px) {
+            .lightbox-nav {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                display: none;
+            }
+            
+            .lightbox-close {
+                top: 20px;
+                right: 20px;
+            }
+            
+            /* Mobile layout fixes for doors page */
+            .main-content-grid {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            
+            /* Door category headings and text alignment */
+            #door-gallery h3 {
+                text-align: left !important;
+            }
+            
+            #door-gallery p {
+                text-align: left !important;
+            }
+            
+            /* Main heading with certification - stack vertically */
+            .container h2 + img {
+                margin-top: 20px;
+            }
+            
+            .container > div > div:first-child > div:first-child {
+                flex-direction: column !important;
+                gap: 20px !important;
+                text-align: center !important;
+            }
+            
+            /* Door category sections - reduce margins and left align */
+            #door-gallery > .container > div {
+                margin-bottom: 30px !important;
+            }
+            
+            /* Door category specific mobile styles */
+            .door-category-title {
+                text-align: left !important;
+                font-size: 1.5rem !important;
+            }
+            
+            .door-category-desc {
+                text-align: left !important;
+                max-width: none !important;
+                margin: 0 0 30px 0 !important;
+            }
+            
+            .door-category {
+                margin-bottom: 30px !important;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Global Navigation -->
-    <div id="global-navbar"></div>
-    
-    <!-- Scroll Progress Bar -->
+    <!-- Scroll Progress Indicator -->
     <div class="scroll-progress">
         <div class="scroll-progress-bar"></div>
     </div>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="subpage-hero">
-            <div class="container">
-                <h1>Bezpečnostné dvere</h1>
-                <p>Kvalitné bezpečnostné dvere pre váš dom alebo podnik</p>
-            </div>
-        </section>
+    <!-- Global Navigation Container -->
+    <div id="global-navbar"></div>
 
-        <!-- Security Doors Section -->
-        <section class="security-doors-section">
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-hero-bg">
+            <img src="sources/IMG_20200508_125444.webp" alt="Bezpečnostné dvere pozadie">
+        </div>
+        <div class="contact-hero-content">
             <div class="container">
-                <div class="security-doors-content">
-                    <h2>Naše bezpečnostné dvere</h2>
-                    <div class="doors-grid">
-                        <!-- Security doors items will be populated here -->
+                <h1 class="contact-hero-title">BEZPEČNOSTNÉ DVERE</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bezpečnostné dvere Content Section -->
+    <section class="contact-section">
+        <div class="container">
+            <!-- Main Content Layout -->
+            <div style="margin-bottom: 60px;">
+                <!-- Heading with Certification -->
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 30px; margin-bottom: 30px; flex-wrap: wrap;">
+                        <h2 style="font-size: 2.5rem; margin: 0; color: #333;">Bezpečnostné dvere HISEC</h2>
+                        <img src="sources/dvere/znak.webp" alt="Certifikácia bezpečnosti" style="max-width: 120px; height: auto;" />
+                    </div>
+                </div>
+
+                <!-- Two Column Layout -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;" class="main-content-grid">
+                    
+                    <!-- Left Column: Main Description -->
+                    <div>
+                        <p style="font-size: 1.1rem; color: #666; line-height: 1.6; margin-bottom: 20px;">Bezpečnostné dvere HISEC sú vhodné ako vstupné dvere do bytov. Nie sú vhodné do rodinných domov.</p>
+                        
+                        <p style="font-size: 1rem; color: #666; line-height: 1.6; margin-bottom: 20px;">Sú dostupné v nadčasovom designe KLASIC a v modernom prevedení TREND a ELEGANTE v rôznych farbách. Kvalita bezpečnostných dverí HISEC je potvrdená slovenským certifikačným úradom Lignotesting a.s., kde boli dvere testované podľa normy STN EN 1627. Spĺňajú tie isté bezpečnostné predpisy ako tu vyrábané dvere, rozdiel je len v ich cene. Naše dvere si kúpite garantovanie za bezkonkurenčné ceny.</p>
+                        
+                        <p style="font-size: 1rem; color: #666; line-height: 1.6; margin-bottom: 0;">Bezpečnostné dvere typu KLASIC dosiahli stupeň bezpečnosti triedy číslo 1 a bezpečnostné dvere typu TREND a ELEGANTE stupeň bezpečnosti triedy číslo 2.</p>
+                    </div>
+
+                    <!-- Right Column: Security Features & Variants -->
+                    <div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;" class="features-grid">
+                            <div>
+                                <h3 style="color: #c8652b; font-size: 1.4rem; margin-bottom: 20px;">Bezpečnostné prvky</h3>
+                                <ul style="color: #666; line-height: 1.8; list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 10px;"><strong>01</strong> Špeciálna zárubňa z ocele, hrúbka až 170mm</li>
+                                    <li style="margin-bottom: 10px;"><strong>02</strong> Krídlo z oceľovej platne posilnené výstuhou</li>
+                                    <li style="margin-bottom: 10px;"><strong>03</strong> 3 nastaviteľné pánty proti vypáčeniu</li>
+                                    <li style="margin-bottom: 10px;"><strong>04</strong> 15-bodový uzamykací systém</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 style="color: #c8652b; font-size: 1.4rem; margin-bottom: 20px;">Dostupné varianty</h3>
+                                <ul style="color: #666; line-height: 1.8; list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 10px;"><strong>KLASIC:</strong> Nadčasový dizajn, trieda 1</li>
+                                    <li style="margin-bottom: 10px;"><strong>TREND:</strong> Moderné prevedenie, trieda 2</li>
+                                    <li style="margin-bottom: 10px;"><strong>ELEGANTE:</strong> Moderné prevedenie, trieda 2</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- Global Footer -->
+    <!-- Door Gallery Section -->
+    <section id="door-gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title" data-text="Portfólio">Portfólio</h2>
+            
+            <!-- KLASIC Category -->
+            <div style="margin-bottom: 50px;" class="door-category">
+                <h3 style="text-align: center; font-size: 2rem; margin-bottom: 20px; color: #c8652b;" class="door-category-title">KLASIC - Bezpečnostná trieda 1</h3>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 30px; color: #666; font-size: 1.1rem; line-height: 1.6;" class="door-category-desc">Výzor týchto dverí už našepkáva aj ich názov, dvere Klasik majú stály klasický výzor, ktorý výborne ladí v každom domove. Vďaka ukrytým pántom je viac elegantný. Na výber máte 4 farebné prevedenia.</p>
+                <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="sources/dvere/klassik 1-3.webp" alt="KLASIC bezpečnostné dvere" loading="lazy" onclick="openLightbox(this)" style="cursor: pointer;">
+                            <div class="gallery-overlay">
+                                <h3>Krémová biela</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="sources/dvere/klassik 2-4.webp" alt="KLASIC bezpečnostné dvere" loading="lazy" onclick="openLightbox(this)" style="cursor: pointer;">
+                            <div class="gallery-overlay">
+                                <h3>Mahagón</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="sources/dvere/klassik 3-4.webp" alt="KLASIC bezpečnostné dvere" loading="lazy" onclick="openLightbox(this)" style="cursor: pointer;">
+                            <div class="gallery-overlay">
+                                <h3>Orech</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="sources/dvere/klassik 4-7.webp" alt="KLASIC bezpečnostné dvere" loading="lazy" onclick="openLightbox(this)" style="cursor: pointer;">
+                            <div class="gallery-overlay">
+                                <h3>Zlatý dub</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ELEGANTE Category -->
+            <div style="margin-bottom: 50px;" class="door-category">
+                <h3 style="text-align: center; font-size: 2rem; margin-bottom: 20px; color: #c8652b;" class="door-category-title">ELEGANTE - Bezpečnostná trieda 2</h3>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 30px; color: #666; font-size: 1.1rem; line-height: 1.6;" class="door-category-desc">Ich vzhľad je úplne novodobý, minimalistický. V ponuke máme štyri farebné prevedenia. Je výborným ochrancom Vášho domova, ak uprednostňujete moderný štýl.</p>
+                <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="sources/dvere/elegant 1-0.webp" alt="ELEGANTE bezpečnostné dvere" loading="lazy" onclick="openLightbox(this)" style="cursor: pointer;">
+                            <div class="gallery-overlay">
+                                <h3>Antrazit</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="sources/dvere/elegante 2.webp" alt="ELEGANTE bezpečnostné dvere" loading="lazy" onclick="openLightbox(this)" style="cursor: pointer;">
+                            <div class="gallery-overlay">
+                                <h3>Tmavý dub</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="sources/dvere/elegante 3.webp" alt="ELEGANTE bezpečnostné dvere" loading="lazy" onclick="openLightbox(this)" style="cursor: pointer;">
+                            <div class="gallery-overlay">
+                                <h3>Zlatý dub</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="sources/dvere/elegante 4.webp" alt="ELEGANTE bezpečnostné dvere" loading="lazy" onclick="openLightbox(this)" style="cursor: pointer;">
+                            <div class="gallery-overlay">
+                                <h3>Dub šedý</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TREND Category -->
+            <div style="margin-bottom: 50px;" class="door-category">
+                <h3 style="text-align: center; font-size: 2rem; margin-bottom: 20px; color: #c8652b;" class="door-category-title">TREND - Bezpečnostná trieda 2</h3>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 30px; color: #666; font-size: 1.1rem; line-height: 1.6;" class="door-category-desc">Ich vzhľad je oveľa modernejší, minimalistický, dokonale zapadne do moderných bytov, ale vďaka svojej jednoduchosti krásne ladí aj s klasickým štýlom bytov. Na výber máte 4 farebné prevedenia.</p>
+                <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="sources/dvere/trend p 1-0.webp" alt="TREND bezpečnostné dvere" loading="lazy" onclick="openLightbox(this)" style="cursor: pointer;">
+                            <div class="gallery-overlay">
+                                <h3>Mahagón</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="sources/dvere/trend p 2.webp" alt="TREND bezpečnostné dvere" loading="lazy" onclick="openLightbox(this)" style="cursor: pointer;">
+                            <div class="gallery-overlay">
+                                <h3>Zlatý dub</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="sources/dvere/trend p 3.webp" alt="TREND bezpečnostné dvere" loading="lazy" onclick="openLightbox(this)" style="cursor: pointer;">
+                            <div class="gallery-overlay">
+                                <h3>Orech</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="sources/dvere/trend p 4.webp" alt="TREND bezpečnostné dvere" loading="lazy" onclick="openLightbox(this)" style="cursor: pointer;">
+                            <div class="gallery-overlay">
+                                <h3>Biela</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer Container -->
     <div id="global-footer"></div>
 
-    <!-- Scripts -->
-    <script src="/components/navbar.js"></script>
-    <script src="/components/footer.js"></script>
-    <script src="/components/carousel.js"></script>
-    <script src="/components/animations.js"></script>
-    <script src="/script.js"></script>
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <button class="lightbox-nav lightbox-prev" onclick="previousImage()">&#8249;</button>
+            <img id="lightbox-image" class="lightbox-image" src="" alt="">
+            <button class="lightbox-nav lightbox-next" onclick="nextImage()">&#8250;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Lightbox functionality for doors
+        let currentImageIndex = 0;
+        let currentImages = [];
+        
+        function openLightbox(imgElement) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            
+            // Get all door images
+            const doorImages = document.querySelectorAll('#door-gallery img[onclick]');
+            currentImages = Array.from(doorImages);
+            currentImageIndex = currentImages.indexOf(imgElement);
+            
+            // Set lightbox content
+            lightboxImage.src = imgElement.src;
+            lightboxImage.alt = imgElement.alt;
+            
+            // Show lightbox
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Add click event to image for next slide
+            lightboxImage.onclick = function() {
+                nextImage();
+            };
+        }
+        
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        function nextImage() {
+            if (currentImageIndex < currentImages.length - 1) {
+                currentImageIndex++;
+            } else {
+                currentImageIndex = 0; // Wrap to first image
+            }
+            updateLightboxImage();
+        }
+        
+        function previousImage() {
+            if (currentImageIndex > 0) {
+                currentImageIndex--;
+            } else {
+                currentImageIndex = currentImages.length - 1; // Wrap to last image
+            }
+            updateLightboxImage();
+        }
+        
+        function updateLightboxImage() {
+            const lightboxImage = document.getElementById('lightbox-image');
+            
+            const currentImg = currentImages[currentImageIndex];
+            lightboxImage.src = currentImg.src;
+            lightboxImage.alt = currentImg.alt;
+            
+            // Add click event to image for next slide
+            lightboxImage.onclick = function() {
+                nextImage();
+            };
+        }
+        
+        // Close lightbox on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowRight') {
+                nextImage();
+            } else if (e.key === 'ArrowLeft') {
+                previousImage();
+            }
+        });
+        
+        // Close lightbox on background click
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+    </script>
 </body>
 </html>
