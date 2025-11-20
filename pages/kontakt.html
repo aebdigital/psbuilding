@@ -121,7 +121,7 @@
                 <div class="contact-form-wrapper">
                     <h2>Napíšte nám</h2>
                     <div id="form-message" class="form-message" style="display: none;"></div>
-                    <form class="contact-form" id="contact-form" action="send-mail-simple.php" method="POST">
+                    <form class="contact-form" id="contact-form">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Meno *</label>
@@ -228,7 +228,7 @@
     <script src="/components/footer.js"></script>
     <script src="/components/carousel.js"></script>
     <script src="/components/animations.js"></script>
-    <script src="/script.js"></script>
+    <script src="/components/script.js"></script>
     
     <script>
         // Contact form handling
@@ -248,13 +248,21 @@
                 btnLoader.style.display = 'inline-block';
                 hideMessage();
                 
-                // Prepare form data
-                const formData = new FormData(contactForm);
+                // Prepare form data for Netlify function
+                const formData = {
+                    name: contactForm.name.value,
+                    email: contactForm.email.value,
+                    phone: contactForm.phone.value,
+                    message: contactForm.message.value
+                };
                 
-                // Submit form via fetch API
-                fetch('send-mail-simple.php', {
+                // Submit form via Netlify function
+                fetch('/.netlify/functions/contact', {
                     method: 'POST',
-                    body: formData
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
                 })
                 .then(response => response.json())
                 .then(data => {

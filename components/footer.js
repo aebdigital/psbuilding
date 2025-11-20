@@ -68,7 +68,7 @@ function loadFooter() {
         
         <div class="footer-bottom">
             <div class="footer-social">
-                <p>Tvorba stránky - <a href="https://aebdigital.com" target="_blank" style="text-decoration: underline;">AEB Digital</a></p>
+                <p>Tvorba stránky - <a href="https://aebdigital.sk" target="_blank" style="text-decoration: underline;">AEB Digital</a></p>
             </div>
             <div class="footer-copyright">
                 <p>&copy; 2024 PS Building s.r.o. Všetky práva vyhradené.</p>
