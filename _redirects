@@ -7,6 +7,15 @@
 /bezpecnostne-dvere /pages/bezpecnostne-dvere.html 200
 /kontakt           /pages/kontakt.html           200
 
+# Gallery category pages
+/galeria/zateplovanie      /pages/galeria/zateplovanie.html      200
+/galeria/obklady-dlazby    /pages/galeria/obklady-dlazby.html    200
+/galeria/maliarske-prace   /pages/galeria/maliarske-prace.html   200
+/galeria/sadrokarton       /pages/galeria/sadrokarton.html       200
+/galeria/murarske-prace    /pages/galeria/murarske-prace.html    200
+/galeria/kamenna-dlazba    /pages/galeria/kamenna-dlazba.html    200
+/galeria/ine-prace         /pages/galeria/ine-prace.html         200
+
 # Legacy redirects for old structure
 /galeria.html      /galeria                      301
 /prenajom.html     /prenajom                     301
