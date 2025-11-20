@@ -1,0 +1,48 @@
+User-agent: *
+Allow: /
+
+# Disallow sensitive files and directories
+Disallow: /send-mail.php
+Disallow: /composer.json
+Disallow: /composer.lock
+Disallow: /vendor/
+Disallow: *.php$
+
+# Allow important resources
+Allow: /sources/
+Allow: *.webp$
+Allow: *.jpg$
+Allow: *.png$
+Allow: *.css$
+Allow: *.js$
+
+# Sitemap location
+Sitemap: https://psbuilding.sk/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Specific bot configurations
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot  
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Block bad bots
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /

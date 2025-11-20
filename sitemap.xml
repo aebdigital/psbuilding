@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Homepage -->
+    <url>
+        <loc>https://psbuilding.sk/</loc>
+        <lastmod>2025-01-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://psbuilding.sk/sources/IMG_20200508_125444.webp</image:loc>
+            <image:caption>PS Building - Profesionálne stavebné služby</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Index page (same as homepage) -->
+    <url>
+        <loc>https://psbuilding.sk/index.html</loc>
+        <lastmod>2025-01-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Contact page -->
+    <url>
+        <loc>https://psbuilding.sk/kontakt.html</loc>
+        <lastmod>2025-01-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Gallery page -->
+    <url>
+        <loc>https://psbuilding.sk/galeria.html</loc>
+        <lastmod>2025-01-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://psbuilding.sk/sources/bytove-jadro/IMG_20181031_184542.webp</image:loc>
+            <image:caption>Bytové jadro - PS Building</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://psbuilding.sk/sources/zateplovacie/IMG_20200508_125444.webp</image:loc>
+            <image:caption>Zatepľovacie systémy - PS Building</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://psbuilding.sk/sources/obklady-dlazby/IMG_20220712_184252.webp</image:loc>
+            <image:caption>Obklady a dlažby - PS Building</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Security doors page -->
+    <url>
+        <loc>https://psbuilding.sk/bezpecnostne-dvere.html</loc>
+        <lastmod>2025-01-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://psbuilding.sk/sources/dvere/klassik%201-3.webp</image:loc>
+            <image:caption>HISEC KLASIC bezpečnostné dvere</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://psbuilding.sk/sources/dvere/trend%20p%201-0.webp</image:loc>
+            <image:caption>HISEC TREND bezpečnostné dvere</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://psbuilding.sk/sources/dvere/elegant%201-0.webp</image:loc>
+            <image:caption>HISEC ELEGANTE bezpečnostné dvere</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Equipment rental page -->
+    <url>
+        <loc>https://psbuilding.sk/prenajom.html</loc>
+        <lastmod>2025-01-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <image:image>
+            <image:loc>https://psbuilding.sk/sources/prenajom/lesenie.webp</image:loc>
+            <image:caption>Prenájom stavebného lešenia</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://psbuilding.sk/sources/prenajom/zdvihac.webp</image:loc>
+            <image:caption>Prenájom zdviháka</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Service category pages (via gallery filtering) -->
+    <url>
+        <loc>https://psbuilding.sk/galeria.html?filter=bytove-jadro</loc>
+        <lastmod>2025-01-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://psbuilding.sk/galeria.html?filter=zateplovacie</loc>
+        <lastmod>2025-01-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://psbuilding.sk/galeria.html?filter=obklady-dlazby</loc>
+        <lastmod>2025-01-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://psbuilding.sk/galeria.html?filter=maliarske-prace</loc>
+        <lastmod>2025-01-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://psbuilding.sk/galeria.html?filter=sadrokarton</loc>
+        <lastmod>2025-01-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://psbuilding.sk/galeria.html?filter=murarske</loc>
+        <lastmod>2025-01-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://psbuilding.sk/galeria.html?filter=kamenna-dlazba</loc>
+        <lastmod>2025-01-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://psbuilding.sk/galeria.html?filter=ine-prace</loc>
+        <lastmod>2025-01-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+</urlset>
