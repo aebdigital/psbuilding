@@ -99,11 +99,11 @@ h2 {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     cursor: pointer;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    z-index: 10001;
+    z-index: 10002;
 }
 
 .lightbox-nav:hover {
@@ -119,10 +119,12 @@ h2 {
 
 .lightbox-prev {
     left: 30px;
+    display: flex !important;
 }
 
 .lightbox-next {
     right: 30px;
+    display: flex !important;
 }
 
 .lightbox-nav svg {
