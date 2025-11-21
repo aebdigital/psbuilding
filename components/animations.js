@@ -103,4 +103,28 @@ function initializeAnimations() {
     
     // Cycle images every 5 seconds
     setInterval(cycleHeroImages, 5000);
+
+    // Parallax effect for hero background
+    const heroBackground = document.querySelector('.hero-background');
+    
+    function updateParallax() {
+        if (!heroBackground) return;
+        
+        const scrolled = window.pageYOffset;
+        const heroHeight = window.innerHeight;
+        
+        // Only apply parallax if we're still in the hero section
+        if (scrolled <= heroHeight) {
+            // Apply 10% parallax (background moves slower than scroll)
+            const parallaxSpeed = 0.1;
+            const yPos = -(scrolled * parallaxSpeed);
+            heroBackground.style.transform = `translateY(${yPos}px)`;
+        }
+    }
+    
+    // Add scroll listener for parallax
+    window.addEventListener('scroll', updateParallax);
+    
+    // Initialize parallax on load
+    updateParallax();
 }
