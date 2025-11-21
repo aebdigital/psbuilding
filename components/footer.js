@@ -40,7 +40,7 @@ function loadFooter() {
                     <ul>
                         <li><a href="/">Domov</a></li>
                         <li><a href="/#services">Služby</a></li>
-                        <li><a href="/galeria">Projekty</a></li>
+                        <li><a href="/galeria/zateplovanie">Projekty</a></li>
                         <li><a href="/prenajom">Prenájom</a></li>
                         <li><a href="/bezpecnostne-dvere">Bezpečnostné dvere</a></li>
                         <li><a href="/kontakt">Kontakt</a></li>

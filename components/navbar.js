@@ -22,7 +22,7 @@ function loadNavbar() {
             <ul class="nav-menu">
                 <li><a href="/" class="nav-link${isHome ? ' active' : ''}">Domov</a></li>
                 <li><a href="/#services" class="nav-link">Služby</a></li>
-                <li><a href="/galeria" class="nav-link${isGaleria ? ' active' : ''}">Projekty</a></li>
+                <li><a href="/galeria/zateplovanie" class="nav-link${isGaleria ? ' active' : ''}">Projekty</a></li>
                 <li><a href="/prenajom" class="nav-link${isPrenajom ? ' active' : ''}">Prenájom</a></li>
                 <li><a href="/bezpecnostne-dvere" class="nav-link${isBezpecnostne ? ' active' : ''}">Bezpečnostné dvere</a></li>
                 <li><a href="/kontakt" class="nav-link${isKontakt ? ' active' : ''}">Kontakt</a></li>
