@@ -6,7 +6,7 @@ function loadFooter() {
     <div class="container">
         <div class="footer-top">
             <div class="footer-cta-content">
-                <h2>Máte otázky o našich stavebných službách?</h2>
+                <h2 class="footer-cta-title">Máte otázky o našich stavebných službách?</h2>
                 <p>Kontaktujte nás a my Vám radi poradíme</p>
             </div>
             <div class="footer-cta-button">

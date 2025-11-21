@@ -1307,11 +1307,12 @@ body {
     flex: 1;
 }
 
-.footer-cta-content h2 {
-    font-size: 2.5rem;
+.footer-cta-title {
+    font-size: 2.5rem !important;
     font-weight: 700;
     margin-bottom: 20px;
-    color: white;
+    color: white !important;
+    text-transform: none !important;
 }
 
 .footer-cta-content p {
@@ -2126,8 +2127,8 @@ body {
         margin-left: 0;
     }
     
-    .footer-cta-content h2 {
-        font-size: 1.8rem;
+    .footer-cta-title {
+        font-size: 1.8rem !important;
     }
     
     .footer-nav-column {
