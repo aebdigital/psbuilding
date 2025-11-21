@@ -41,23 +41,22 @@
     <!-- Category Content Section -->
     <section class="contact-section">
         <div class="container">
-            <div class="category-layout">
-                <!-- Category Sidebar -->
-                <div class="category-sidebar">
-                    <h3>Kategórie projektov</h3>
-                    <ul class="category-nav">
-                        <li><a href="/galeria/zateplovanie" class="category-link">Zatepľovacie systémy</a></li>
-                        <li><a href="/galeria/obklady-dlazby" class="category-link">Obklady a Dlažby</a></li>
-                        <li><a href="/galeria/maliarske-prace" class="category-link">Maliarske práce AIRLESS</a></li>
-                        <li><a href="/galeria/sadrokarton" class="category-link">Sadrokartonové systémy</a></li>
-                        <li><a href="/galeria/murarske-prace" class="category-link">Murárske práce</a></li>
-                        <li><a href="/galeria/kamenna-dlazba" class="category-link active">Kamenná dlažba</a></li>
-                        <li><a href="/galeria/ine-prace" class="category-link">Iné práce</a></li>
-                    </ul>
-                </div>
+            <!-- Category Filter Dropdown -->
+            <div class="category-filter-container">
+                <label for="category-select" class="filter-label">Vyberte kategóriu:</label>
+                <select id="category-select" class="category-dropdown">
+                    <option value="/galeria/zateplovanie">Zatepľovacie systémy</option>
+                    <option value="/galeria/obklady-dlazby">Obklady a Dlažby</option>
+                    <option value="/galeria/maliarske-prace">Maliarske práce AIRLESS</option>
+                    <option value="/galeria/sadrokarton">Sadrokartonové systémy</option>
+                    <option value="/galeria/murarske-prace">Murárske práce</option>
+                    <option value="/galeria/kamenna-dlazba" selected>Kamenná dlažba</option>
+                    <option value="/galeria/ine-prace">Iné práce</option>
+                </select>
+            </div>
 
-                <!-- Category Content -->
-                <div class="category-content">
+            <!-- Category Content -->
+            <div class="category-content-full">
                     <div class="category-header">
                         <h2 class="category-title">Kamenná dlažba</h2>
                     </div>
@@ -232,7 +231,6 @@
                             </a>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </section>
@@ -247,5 +245,6 @@
     <script src="/components/animations.js"></script>
     <script src="/components/lightbox.js"></script>
     <script src="/components/script.js"></script>
+    <script src="/components/category-dropdown.js"></script>
 </body>
 </html>
