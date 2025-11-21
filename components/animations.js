@@ -141,14 +141,43 @@ function initializeAnimations() {
         }
     }
     
-    // Combined scroll listener for parallax and hero content fade
+    // Prevent over-scrolling beyond footer
+    function limitScroll() {
+        const footer = document.querySelector('#global-footer, footer');
+        if (!footer) return;
+        
+        const footerTop = footer.offsetTop;
+        const windowHeight = window.innerHeight;
+        const maxScroll = footerTop - windowHeight;
+        
+        if (window.pageYOffset > maxScroll) {
+            window.scrollTo(0, maxScroll);
+        }
+    }
+    
+    // Combined scroll listener for all scroll effects
     function handleScroll() {
         updateParallax();
         updateHeroContentFade();
+        limitScroll();
     }
     
     // Add scroll listener
     window.addEventListener('scroll', handleScroll);
+    
+    // Also prevent scrolling with wheel/touch beyond footer
+    window.addEventListener('wheel', function(e) {
+        const footer = document.querySelector('#global-footer, footer');
+        if (!footer) return;
+        
+        const footerTop = footer.offsetTop;
+        const windowHeight = window.innerHeight;
+        const maxScroll = footerTop - windowHeight;
+        
+        if (window.pageYOffset >= maxScroll && e.deltaY > 0) {
+            e.preventDefault();
+        }
+    }, { passive: false });
     
     // Initialize effects on load
     updateParallax();

@@ -140,6 +140,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -147,6 +148,8 @@ body {
     line-height: 1.4;
     color: #333;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
 
 .container {
@@ -288,13 +291,16 @@ body {
 
 /* Hero Section */
 .hero {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100vh;
     overflow: hidden;
     display: flex;
     align-items: flex-end;
     color: white;
-    z-index: 1;
+    z-index: -1;
 }
 
 .hero-background {
@@ -345,7 +351,7 @@ body {
     align-items: flex-end;
     width: 100%;
     gap: 60px;
-    z-index: 2;
+    z-index: 0;
     transition: opacity 0.3s ease;
 }
 
@@ -567,12 +573,16 @@ body {
 }
 
 /* About Section */
+/* Hero spacer to account for fixed hero */
+.hero + * {
+    margin-top: 100vh;
+}
+
 .about {
     padding: 100px 0;
     background: #fff;
     position: relative;
-    z-index: 3;
-    margin-top: 100vh;
+    z-index: 1;
 }
 
 .about-content {
