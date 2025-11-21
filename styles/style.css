@@ -2585,8 +2585,12 @@ body {
     display: none;
 }
 
-.btn-loader-hidden {
+.btn-loader {
     display: none;
+}
+
+.btn-loader-hidden {
+    display: none !important;
 }
 
 /* Mobile responsive for custom pages */
