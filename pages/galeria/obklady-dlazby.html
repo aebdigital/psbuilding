@@ -57,7 +57,7 @@
     <!-- Category Content Section -->
     <section class="contact-section">
         <div class="container">
-            <!-- Category Filter Dropdown -->
+            <!-- Category Filter Dropdown (Mobile Only) -->
             <div class="category-filter-container">
                 <label for="category-select" class="filter-label">Vyberte kategóriu:</label>
                 <select id="category-select" class="category-dropdown">
@@ -71,8 +71,23 @@
                 </select>
             </div>
 
-            <!-- Category Content -->
-            <div class="category-content-full">
+            <div class="category-layout">
+                <!-- Category Sidebar (Desktop Only) -->
+                <div class="category-sidebar">
+                    <h3>Kategórie projektov</h3>
+                    <ul class="category-nav">
+                        <li><a href="/galeria/zateplovanie" class="category-link">Zatepľovacie systémy</a></li>
+                        <li><a href="/galeria/obklady-dlazby" class="category-link active">Obklady a Dlažby</a></li>
+                        <li><a href="/galeria/maliarske-prace" class="category-link">Maliarske práce AIRLESS</a></li>
+                        <li><a href="/galeria/sadrokarton" class="category-link">Sadrokartonové systémy</a></li>
+                        <li><a href="/galeria/murarske-prace" class="category-link">Murárske práce</a></li>
+                        <li><a href="/galeria/kamenna-dlazba" class="category-link">Kamenná dlažba</a></li>
+                        <li><a href="/galeria/ine-prace" class="category-link">Iné práce</a></li>
+                    </ul>
+                </div>
+
+                <!-- Category Content -->
+                <div class="category-content">
                     <div class="category-header">
                         <h2 class="category-title">Obklady a Dlažby</h2>
                     </div>
@@ -1191,6 +1206,7 @@
                             </a>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </section>
