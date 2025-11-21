@@ -122,9 +122,35 @@ function initializeAnimations() {
         }
     }
     
-    // Add scroll listener for parallax
-    window.addEventListener('scroll', updateParallax);
+    // Hero content fade effect
+    const heroContent = document.querySelector('.hero-content');
     
-    // Initialize parallax on load
+    function updateHeroContentFade() {
+        if (!heroContent) return;
+        
+        const scrolled = window.pageYOffset;
+        const heroHeight = window.innerHeight;
+        const fadeStart = heroHeight * 0.7; // Start fading at 70% of hero height
+        
+        if (scrolled >= fadeStart) {
+            const fadeProgress = Math.min((scrolled - fadeStart) / (heroHeight * 0.3), 1);
+            const opacity = 1 - fadeProgress;
+            heroContent.style.opacity = opacity;
+        } else {
+            heroContent.style.opacity = 1;
+        }
+    }
+    
+    // Combined scroll listener for parallax and hero content fade
+    function handleScroll() {
+        updateParallax();
+        updateHeroContentFade();
+    }
+    
+    // Add scroll listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initialize effects on load
     updateParallax();
+    updateHeroContentFade();
 }
