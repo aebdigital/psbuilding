@@ -1112,11 +1112,11 @@ body {
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #333;
+    color: #000;
 }
 
 .service-card p {
-    color: #515151;
+    color: rgb(51, 51, 51);
     line-height: 1.6;
     margin-bottom: 30px;
     flex: 1;
@@ -2090,7 +2090,7 @@ body {
     
     .services-carousel-container {
         padding: 20px 0;
-        margin: 40px -15px 0 -15px;
+        margin: 0px -15px 0 -15px;
         width: calc(100% + 30px);
     }
     
