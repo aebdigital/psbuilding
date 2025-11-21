@@ -1674,7 +1674,7 @@ body {
     }
     
     .contact-hero-title {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
 
     .contact-grid {
@@ -1845,17 +1845,17 @@ body {
     }
     
     .hero-content {
-        position: fixed;
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: calc(100% - 30px);
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
         max-width: 95%;
         flex-direction: column;
         text-align: left;
         gap: 20px;
-        padding: 0 15px;
-        margin-top: 0;
+        padding: 0 15px 30px;
+        margin: 0 auto;
         padding-top: 0;
     }
     
@@ -1930,7 +1930,8 @@ body {
     }
     
     .hero {
-        min-height: 80vh;
+        position: relative;
+        height: 100vh;
         padding-bottom: 20px;
         display: flex;
         align-items: flex-end;
@@ -2089,8 +2090,8 @@ body {
     }
     
     .services-carousel .service-card {
-        flex: 0 0 calc(100% - 40px);
-        min-width: 300px;
+        flex: 0 0 calc(85% - 40px);
+        min-width: 280px;
     }
     
     .footer-top {
@@ -2104,7 +2105,7 @@ body {
         grid-template-columns: 1fr;
         gap: 40px;
         text-align: left;
-        padding: 0 15px;
+        padding: 0;
     }
     
     .footer-navigation {
