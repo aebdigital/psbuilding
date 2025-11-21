@@ -8,7 +8,8 @@ function initializeCarousel() {
     
     if (carousel && cards.length > 0) {
         const cardWidth = cards[0].offsetWidth + 40; // card width + gap
-        const maxSlides = Math.max(0, cards.length - 3); // Show 3 cards at a time, 4th partially visible
+        const isMobile = window.innerWidth <= 768;
+        const maxSlides = isMobile ? Math.max(0, cards.length - 1) : Math.max(0, cards.length - 3); // Mobile: show 1 card at a time, Desktop: 3 cards
         
         function updateCarousel() {
             const translateX = -(currentSlide * cardWidth);

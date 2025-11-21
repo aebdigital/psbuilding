@@ -65,7 +65,7 @@ exports.handler = async (event, context) => {
         <title>Nová správa z kontaktného formulára</title>
         <style>
             body {
-                font-family: 'Inter', Arial, sans-serif;
+                font-family: 'Montserrat', Arial, sans-serif;
                 line-height: 1.6;
                 color: #333;
                 max-width: 600px;

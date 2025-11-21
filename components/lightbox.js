@@ -68,6 +68,10 @@ function initializeLightbox() {
     
     // Update navigation buttons
     function updateNavButtons() {
+        // Always show buttons, but disable when at edges
+        prevBtn.style.display = 'flex';
+        nextBtn.style.display = 'flex';
+        
         prevBtn.classList.toggle('disabled', currentIndex === 0);
         nextBtn.classList.toggle('disabled', currentIndex === images.length - 1);
     }
