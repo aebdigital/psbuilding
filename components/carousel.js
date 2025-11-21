@@ -49,15 +49,15 @@ function initializeCarousel() {
         });
     }
 
-    // Service button click handlers - navigate to gallery with filter
+    // Service button click handlers - navigate to gallery category pages
     const serviceButtons = document.querySelectorAll('.service-btn');
     serviceButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             const serviceCard = this.closest('.service-card');
-            const filter = serviceCard.getAttribute('data-filter');
-            if (filter) {
-                window.location.href = `/galeria?filter=${filter}`;
+            const link = serviceCard.getAttribute('data-link');
+            if (link) {
+                window.location.href = link;
             }
         });
     });
