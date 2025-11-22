@@ -32,8 +32,8 @@ function initializeApp() {
         const currentPage = window.location.pathname;
         let triggerPoint;
         
-        // Use consistent 30vh trigger point for all pages
-        triggerPoint = window.innerHeight * 0.3; // 30vh
+        // Use consistent 10vh trigger point for all pages
+        triggerPoint = window.innerHeight * 0.1; // 10vh
         
         // Use passed state or check DOM state
         let isHamburgerActive;
