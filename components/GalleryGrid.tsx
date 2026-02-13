@@ -100,7 +100,7 @@ export default function GalleryGrid({ title, images }: GalleryGridProps) {
                   <li key={cat.slug}>
                     <Link
                       href={`/galeria/${cat.slug}`}
-                      className={`block px-4 py-2 rounded transition-colors ${pathname.includes(cat.slug) ? 'bg-[#c8652b] text-white' : 'text-gray-600 hover:bg-gray-100 hover:text-[#c8652b]'}`}
+                      className={`block px-4 py-2 rounded transition-colors ${pathname?.includes(cat.slug) ? 'bg-[#c8652b] text-white' : 'text-gray-600 hover:bg-gray-100 hover:text-[#c8652b]'}`}
                     >
                       {cat.name}
                     </Link>
