@@ -36,6 +36,7 @@ export default function Navbar() {
   ];
 
   const isActive = (path: string) => {
+    if (!pathname) return false;
     if (path === '/' && pathname === '/') return true;
     if (path !== '/' && pathname.startsWith(path)) return true;
     // Special case for Projects which has sub-routes
