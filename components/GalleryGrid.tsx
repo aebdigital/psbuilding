@@ -81,7 +81,7 @@ export default function GalleryGrid({ title, images }: GalleryGridProps) {
             id="category-select"
             className="block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#c8652b] focus:border-[#c8652b]"
             onChange={(e) => window.location.href = `/galeria/${e.target.value}`}
-            value={pathname.split('/').pop()}
+            value={pathname?.split('/').pop() || ''}
           >
             {categories.map((cat) => (
               <option key={cat.slug} value={cat.slug}>{cat.name}</option>
