@@ -1,6 +1,9 @@
 [build]
-<<<<<<< HEAD
-  publish = "."
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [[headers]]
   for = "/*"
@@ -24,10 +27,3 @@
   for = "/components/*"
   [headers.values]
     Cache-Control = "public, max-age=86400"
-=======
-  command = "npm run build"
-  publish = ".next"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
->>>>>>> 5ff3e3d (feat: complete Next.js website with SEO refinements, cookies, and gallery update)
