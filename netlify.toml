@@ -6,7 +6,8 @@
   package = "@netlify/plugin-nextjs"
 
 [functions]
-  included_files = ["!public/sources/**/*"]
+  included_files = ["!public/sources/**"]
+  external_node_modules = ["sharp"]
 
 [[headers]]
   for = "/*"
