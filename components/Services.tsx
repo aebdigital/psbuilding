@@ -21,7 +21,7 @@ const services = [
     title: 'Obklady a Dlažby',
     description: 'Pokládka keramických obkladov a dlažieb pre interiér i exteriér. Precízne vyhotovenie s dlhoročnou zárukou a použitím kvalitných materiálov.',
     link: '/galeria/obklady-dlazby',
-    image: '/sources/obklady-dlazby/IMG_20221011_114550.jpeg',
+    image: '/sources/obklady-dlazby/IMG_20221011_114550.webp',
     icon: (
       <svg width="60" height="60" viewBox="0 0 60 60" fill="none" className="text-[#c8652b] group-hover:text-white">
         <path d="M5 5h20v20H5V5zm30 0h20v20H35V5zM5 35h20v20H5V35zm30 0h20v20H35V35z" fill="currentColor" />

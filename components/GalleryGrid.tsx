@@ -121,10 +121,10 @@ export default function GalleryGrid({ title, images }: GalleryGridProps) {
                 {images.map((src, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, scale: 0.9 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.05 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.3, delay: (index % 3) * 0.1 }}
                     className="aspect-square relative overflow-hidden rounded-lg shadow-md cursor-pointer group bg-gray-200"
                     onClick={() => openLightbox(index)}
                   >

@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description: "Špecialisti na dokončovacie stavebné práce, zatepľovanie a rekonštrukcie.",
     images: [
       {
-        url: "/sources/og-image.jpg", // Suggested image path
+        url: "/sources/IMG_20200508_125444.webp",
         width: 1200,
         height: 630,
         alt: "PS Building - Profesionálne stavebné služby",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "PS Building - Profesionálne stavebné služby",
     description: "Špecialisti na dokončovacie stavebné práce, zatepľovanie a rekonštrukcie.",
-    images: ["/sources/og-image.jpg"],
+    images: ["/sources/IMG_20200508_125444.webp"],
   },
   robots: {
     index: true,
